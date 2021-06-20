@@ -2,36 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-//import createSagaMiddleware from "redux-saga";
+import createSagaMiddleware from "redux-saga";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { createStore, combineReducers/*, applyMiddleware */} from "redux";
-//import dataReducer from "./reducers/dataEnter";
-//import { rootSaga } from "./sagas/index";
-import { reducer as formReducer } from 'redux-form'
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import { rootSaga } from "./sagas/index";
 
-
-const reducers = {
-  form: formReducer     
-}
-const reducer = combineReducers(reducers)
-const store = createStore(reducer)
-
-/*const saga = createSagaMiddleware();
-
-const rootReducer = combineReducers({
-  dataReducer,
-});
-
-const store = createStore(rootReducer, applyMiddleware(saga));
-
-saga.run(rootSaga);*/
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/*<Provider store={store}>*/}
       <App />
-    </Provider>
+   {/*} </Provider>*/}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -70,6 +70,9 @@ const Register = ({ initialFormValues, onRegister, classes }) => (
               >
                 Sign Up
               </Button>
+              <Button fullWidth variant="contained" color="secondary" >
+            TEST BUTTON
+          </Button>
             </Grid>
           ))}
         </Grid>

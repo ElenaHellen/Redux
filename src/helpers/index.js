@@ -1,4 +1,4 @@
-export const COUNTS = [1, 2, 3];
+export const COUNTS = [1];
 export const RESPONSE = {
   film: {
     name: "Pulp Fiction",
