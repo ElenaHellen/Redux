@@ -8,12 +8,20 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { rootSaga } from "./sagas/index";
 
+//import { createStore, combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 
+/*const reducers = {
+  // ... your other reducers here ...
+  form: formReducer     // <---- Mounted at 'form'
+}
+const reducer = combineReducers(reducers)
+const store = createStore(reducer)*/
 ReactDOM.render(
   <React.StrictMode>
-    {/*<Provider store={store}>*/}
+   {/* <Provider store={store}>*/}
       <App />
-   {/*} </Provider>*/}
+   {/*</Provider>*/}
   </React.StrictMode>,
   document.getElementById("root")
 );
