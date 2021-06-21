@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import Route from "./components/route";
 
 //import RegisterPage from "../src/containers/RegisterContainer";
-import Route from "./components/route";
+import LoginPage from "../src/containers/index";
 
 
 import { root} from "./AppRoutes";
