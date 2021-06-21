@@ -1,29 +1,28 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import createSagaMiddleware from "redux-saga";
-import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { rootSaga } from "./sagas/index";
-
-//import { createStore, combineReducers } from 'redux'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux'
 import { reducer as formReducer } from 'redux-form'
+// Or with Immutablejs:
+// import { reducer as formReducer } from 'redux-form/immutable';
 
-/*const reducers = {
+const reducers = {
   // ... your other reducers here ...
-  form: formReducer     // <---- Mounted at 'form'
+  form: formReducer
 }
 const reducer = combineReducers(reducers)
-const store = createStore(reducer)*/
+const store = createStore(reducer)
+
 ReactDOM.render(
   <React.StrictMode>
-   {/* <Provider store={store}>*/}
-      <App />
-   {/*</Provider>*/}
+    <Provider store = {store}>
+    <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
